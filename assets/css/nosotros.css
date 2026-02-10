@@ -1,0 +1,163 @@
+:root{
+  --perita-blue: #0b4aa2;
+  --perita-blue-dark: #072f66;
+  --perita-white: #ffffff;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+@media (min-width: 992px){
+  body{
+    overflow-y: hidden;
+  }
+}
+
+/* ===== NAVBAR ===== */
+.perita-logo{
+  height: 42px;
+  width: auto;
+  display: block;
+}
+@media (min-width: 992px){
+  .perita-logo{ height: 46px; }
+}
+
+.perita-link{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #2b2b2b !important;
+  padding: .65rem .85rem !important;
+  border-radius: .5rem;
+  transition: color .15s ease, background-color .15s ease;
+}
+.perita-link:hover{
+  color: var(--perita-blue) !important;
+  background: rgba(11, 74, 162, 0.06);
+}
+.perita-active{
+  font-weight: 700;
+  color: #111 !important;
+}
+.perita-active::after{
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 8px;
+  height: 2px;
+  background: var(--perita-blue);
+  border-radius: 999px;
+}
+
+@media (max-width: 991.98px){
+  .navbar-nav{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+  .perita-link{
+    padding: .8rem 1rem !important;
+  }
+  .perita-active::after{
+    left: 16px;
+    right: 16px;
+    bottom: 10px;
+  }
+}
+
+/* ===== MAIN ===== */
+.nosotros-main{
+  min-height: calc(100vh - 72px - 52px);
+}
+
+/* ===== Header ===== */
+.nosotros-header{
+  margin-bottom: 3.75rem;
+}
+
+.nosotros-page-title{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: .8px;
+  color: var(--perita-blue-dark);
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+  margin: 0;
+}
+
+.nosotros-page-subtitle{
+  color: rgba(0,0,0,0.65);
+  font-size: clamp(.95rem, 1.5vw, 1.05rem);
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+/* ===== Texto ===== */
+.nosotros-text-wrap{
+  max-width: 62ch;
+}
+
+.nosotros-lead-title{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: var(--perita-blue-dark);
+  letter-spacing: .3px;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.nosotros-parrafo{
+  color: rgba(0,0,0,0.75);
+  text-align: justify;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+/* ===== Botón ===== */
+.btn-perita{
+  border: 0;
+  background: var(--perita-blue);
+  color: var(--perita-white);
+  font-weight: 600;
+  font-size: 100%;
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(0,0,0,.14);
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+}
+.btn-perita:hover{
+  background: var(--perita-blue-dark);
+  color: var(--perita-white);
+  transform: translateY(-1px);
+}
+.btn-perita:focus{
+  box-shadow: 0 0 0 .25rem rgba(11, 74, 162, .25);
+}
+
+/* ===== Imagen ===== */
+.nosotros-img-card{
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,.18);
+  background: #0b0b0b;
+  max-width: 380px;
+  width: 100%;
+}
+
+.nosotros-img{
+  width: 100%;
+  height: clamp(340px, 44vh, 520px);
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== FOOTER ===== */
+.footer-perita{
+  background: var(--perita-blue-dark);
+  color: rgba(255,255,255,0.92);
+  font-size: .95rem;
+}

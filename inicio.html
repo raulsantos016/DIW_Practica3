@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="./assets/css/inicio.css" />
+
+    <title>Bar Perita: sevillanía en barra | Inicio</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav id="navbarPerita" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="./inicio.html" aria-label="Bar Perita">
+                <img src="./assets/images/logo.png" alt="Logo Bar Perita" class="perita-logo">
+            </a>
+
+            <!-- Hamburguesa (XS) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#peritaNav"
+                aria-controls="peritaNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="peritaNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link perita-link perita-active" href="./inicio.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./nosotros.html">QUIÉNES SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./productos.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <main class="flex-grow-1">
+        <section class="hero d-flex align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8 text-center">
+                        <h1 class="hero-title mb-3">BAR PERITA</h1>
+                        <p class="hero-subtitle mb-4">
+                            El sur se saborea sin prisa.
+                        </p>
+
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-perita btn-lg px-4" href="./carta.pdf" target="_blank" rel="noopener">
+                                EXPLORA NUESTRO MENÚ
+                            </a>
+                        </div>
+
+                        <div class="hero-hint mt-4 d-none d-md-block">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Sevilla · Tradición · Barra
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footerPerita" class="footer-perita">
+        <div class="container">
+            <div class="py-3 text-center">
+                © 2026 Bar Perita · Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS (para ajustar alto del hero y garantizar 1 pantalla, sin scroll) -->
+    <script>
+        (function () {
+            const setHeights = () => {
+                const nav = document.getElementById('navbarPerita');
+                const footer = document.getElementById('footerPerita');
+                const navH = nav ? nav.offsetHeight : 0;
+                const footerH = footer ? footer.offsetHeight : 0;
+
+                document.documentElement.style.setProperty('--nav-h', navH + 'px');
+                document.documentElement.style.setProperty('--footer-h', footerH + 'px');
+            };
+
+            window.addEventListener('load', setHeights);
+            window.addEventListener('resize', setHeights);
+        })();
+    </script>
+
+</body>
+
+</html>

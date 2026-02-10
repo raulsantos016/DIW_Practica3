@@ -1,0 +1,261 @@
+:root{
+  --perita-blue: #0b4aa2;
+  --perita-blue-dark: #072f66;
+  --perita-white: #ffffff;
+
+  /* Alto del carrusel (ajustable por breakpoint) */
+  --carousel-h: 46vh;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+}
+
+@media (min-width: 992px){
+  body{
+    overflow-y: hidden;
+  }
+}
+
+/* ===== NAVBAR ===== */
+.perita-logo{
+  height: 42px;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 992px){
+  .perita-logo{ height: 46px; }
+}
+
+.perita-link{
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #2b2b2b !important;
+  padding: .65rem .85rem !important;
+  border-radius: .5rem;
+  transition: color .15s ease, background-color .15s ease;
+}
+
+.perita-link:hover{
+  color: var(--perita-blue) !important;
+  background: rgba(11, 74, 162, 0.06);
+}
+
+.perita-active{
+  font-weight: 700;
+  color: #111 !important;
+}
+
+.perita-active::after{
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 8px;
+  height: 2px;
+  background: var(--perita-blue);
+  border-radius: 999px;
+}
+
+@media (max-width: 991.98px){
+  .navbar-nav{
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+  .perita-link{
+    padding: .8rem 1rem !important;
+  }
+  .perita-active::after{
+    left: 16px;
+    right: 16px;
+    bottom: 10px;
+  }
+}
+
+/* ===== MAIN sin scroll ===== */
+.productos-main{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.productos-section{
+  height: 100%;
+  padding: 1rem 0;
+}
+
+/* Header */
+.productos-header{
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+}
+
+.productos-title{
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: .8px;
+  color: var(--perita-blue-dark);
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
+  margin: 0;
+}
+
+.productos-subtitle{
+  color: rgba(0,0,0,0.65);
+  font-size: clamp(.95rem, 1.5vw, 1.05rem);
+}
+
+/* Carrusel */
+.productos-carousel-wrap{
+  min-height: 0; /* importante para que flex no desborde */
+  padding-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.productos-carousel-inner{
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,.18);
+}
+
+.producto-slide{
+  position: relative;
+  width: 100%;
+  height: var(--carousel-h);
+  background: #0b0b0b;
+}
+
+.producto-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.productos-carousel-inner,
+.carousel-item,
+.producto-slide{
+  height: 100%;
+}
+
+/* Altura REAL del carrusel */
+#productosCarousel{
+  height: 95%;
+  max-width: 900px;   /* ajusta: 800 / 900 / 1000 */
+  margin: 0 auto;
+}
+
+/* Overlay inferior (franja + degradado) */
+.producto-overlay{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.1rem 1.1rem .95rem;
+  background: linear-gradient(180deg, rgba(7,47,102,0), rgba(7,47,102,0.78));
+}
+
+.producto-nombre{
+  margin: 0;
+  color: rgba(255,255,255,0.96);
+  font-weight: 700;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  text-shadow: 0 10px 22px rgba(0,0,0,.45);
+}
+
+/* Controles más “finos” */
+.carousel-control-prev,
+.carousel-control-next{
+  width: 10%;
+  opacity: 0.95;
+}
+
+.carousel-indicators{
+  margin-bottom: .4rem;
+}
+
+/* Acciones (botones) */
+.productos-actions{
+  padding-top: .35rem;
+  padding-bottom: .25rem;
+}
+
+/* Botones estilo Perita */
+.btn-perita{
+  border: 0;
+  background: var(--perita-blue);
+  color: var(--perita-white);
+  font-weight: 600;
+  font-size: 100%;
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(0,0,0,.14);
+  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+}
+
+.btn-perita:hover{
+  background: var(--perita-blue-dark);
+  color: var(--perita-white);
+  transform: translateY(-1px);
+}
+
+.btn-perita:focus{
+  box-shadow: 0 0 0 .25rem rgba(11, 74, 162, .25);
+}
+
+.btn-perita-outline{
+  border: 2px solid var(--perita-blue);
+  background: var(--perita-white);
+  color: var(--perita-blue-dark);
+  font-weight: 600;
+  font-size: 100%;
+  border-radius: 999px;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.btn-perita-outline:hover{
+  background: rgba(11, 74, 162, 0.08);
+  border-color: var(--perita-blue-dark);
+  color: var(--perita-blue-dark);
+  transform: translateY(-1px);
+}
+
+.btn-perita,
+.btn-perita-outline{
+  min-height: 46px;
+  padding: 0 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+/* ===== FOOTER ===== */
+.footer-perita{
+  background: var(--perita-blue-dark);
+  color: rgba(255,255,255,0.92);
+  font-size: .95rem;
+}
+
+/* En móvil y tablet: permitir que la página crezca y se pueda ver el footer
+   cuando el menú hamburguesa está abierto */
+@media (max-width: 991.98px){
+  .productos-main{
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  }
+
+  main, header, footer{
+    overflow: visible !important;
+  }
+}

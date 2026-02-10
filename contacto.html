@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="./assets/css/contacto.css" />
+
+    <title>Bar Perita: sevillanía en barra | Contacto</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav id="navbarPerita" class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="./inicio.html" aria-label="Bar Perita">
+                <img src="./assets/images/logo.png" alt="Logo Bar Perita" class="perita-logo">
+            </a>
+
+            <!-- Hamburguesa (XS) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#peritaNav"
+                aria-controls="peritaNav" aria-expanded="false" aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="peritaNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./inicio.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./nosotros.html">QUIÉNES SOMOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link" href="./productos.html">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link perita-link perita-active" href="./contacto.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO -->
+    <main class="flex-grow-1">
+        <section class="contacto-section py-4 py-lg-5">
+            <div class="container">
+
+                <!-- Título + frase -->
+                <div class="text-center contacto-header mb-4">
+                    <h1 class="contacto-page-title mb-2">UBICACIÓN Y CONTACTO</h1>
+                </div>
+
+                <div class="row g-4 align-items-start">
+                    <!-- Columna izquierda -->
+                    <div class="col-12 col-lg-6 contacto-left">
+                        <p class="contacto-text">
+                            En uno de los barrios con más esencia de Sevilla, Bar Perita ofrece un espacio
+                            acogedor donde disfrutar del sabor de siempre.
+                        </p>
+
+                        <!-- Mapa -->
+                        <div class="mapa mb-3">
+                            <iframe
+                                src="https://www.google.com/maps?q=Plaza%20de%20San%20Julian%2C%20C.%20San%20Hermenegildo%2C%20Sevilla&output=embed"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
+
+                        </div>
+
+                        <!-- Info -->
+                        <div class="contacto-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Plaza de San Julián · Casco Antiguo (Sevilla)</p>
+                            <p><i class="fas fa-phone"></i> 600 123 456</p>
+                            <p><i class="fab fa-instagram"></i> @barperita</p>
+                            <p><i class="far fa-clock"></i> Lunes a Domingo: 12:00 – 00:00</p>
+                            <p class="contacto-aviso mb-0">
+                                Para reservas y consultas, llámanos o escríbenos por Instagram.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Columna derecha: formulario -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card contacto-card shadow-sm border-0">
+                            <div class="card-body p-4">
+
+                                <h3 class="contacto-form-title mb-3">Escríbenos</h3>
+
+                                <!-- Alert éxito (oculto por defecto) -->
+                                <div id="contactoAlert" class="alert alert-success d-none" role="alert">
+                                    ✅ Mensaje enviado correctamente. ¡Gracias por contactar con Bar Perita!
+                                </div>
+
+                                <form id="contactoForm" novalidate>
+                                    <div class="mb-3">
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"
+                                            required>
+                                        <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Correo</label>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="tunombre@gmail.com" required>
+                                        <div class="invalid-feedback">Por favor, escribe un correo válido.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="mensaje" class="form-label">Mensaje</label>
+                                        <textarea class="form-control" id="mensaje" rows="5"
+                                            placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                                        <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+                                    </div>
+
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <button type="submit" class="btn btn-perita btn-lg px-4">
+                                            ENVIAR
+                                        </button>
+                                        <button type="reset" class="btn btn-perita-outline btn-lg px-4">
+                                            LIMPIAR
+                                        </button>
+                                    </div>
+                                    <!-- Mensaje de confirmación -->
+                                    <p id="contactoMensaje" class="contacto-success mt-3 d-none">
+                                        ¡Gracias por contactar con Bar Perita!
+                                    </p>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footerPerita" class="footer-perita">
+        <div class="container">
+            <div class="py-3 text-center">
+                © 2026 Bar Perita · Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Formulario: validar, mostrar mensaje y resetear -->
+    <script>
+        (function () {
+            const form = document.getElementById('contactoForm');
+            const mensaje = document.getElementById('contactoMensaje');
+
+            let reseteoPorEnvio = false;
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                    return;
+                }
+
+                // Mostrar mensaje
+                mensaje.classList.remove('d-none');
+
+                // Marcar que el reset viene del envío
+                reseteoPorEnvio = true;
+
+                // Resetear formulario
+                form.reset();
+                form.classList.remove('was-validated');
+
+                // Volver a permitir que el botón "LIMPIAR" sí oculte el mensaje
+                reseteoPorEnvio = false;
+            });
+
+            // Solo ocultar el mensaje cuando el reset lo hace el usuario (botón LIMPIAR)
+            form.addEventListener('reset', function () {
+                if (!reseteoPorEnvio) {
+                    mensaje.classList.add('d-none');
+                }
+                form.classList.remove('was-validated');
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/galeria.css" />
+
+  <title>Bar Perita | Galería</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- NAVBAR (solo volver a PRODUCTOS) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+      <!-- Logo -> vuelve a productos -->
+      <a class="navbar-brand d-flex align-items-center" href="./productos.html" aria-label="Volver a Productos">
+        <img src="./assets/images/logo.png" alt="Logo Bar Perita" class="perita-logo">
+      </a>
+
+      <div class="ms-auto">
+        <a href="./productos.html" class="btn btn-perita-outline btn-sm">
+          <i class="fas fa-arrow-left me-2"></i> Volver a Productos
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <main class="flex-grow-1 galeria-main">
+    <section class="py-4 py-lg-5">
+      <div class="container h-100 d-flex flex-column">
+
+        <!-- Título -->
+        <div class="text-center galeria-header">
+          <h1 class="galeria-title mb-2">GALERÍA</h1>
+          <p class="galeria-subtitle mb-0">
+            Un vistazo rápido a nuestros mejores platos.
+          </p>
+        </div>
+
+        <!-- Grid de fotos -->
+        <div class="galeria-grid-wrap flex-grow-1">
+          <div class="row g-3 g-xl-4">
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="0">
+                <img src="./assets/images/productos/producto1.jpg" alt="Foto 1" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="1">
+                <img src="./assets/images/productos/producto2.webp" alt="Foto 2" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="2">
+                <img src="./assets/images/productos/producto3.webp" alt="Foto 3" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="3">
+                <img src="./assets/images/productos/producto4.jpg" alt="Foto 4" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="4">
+                <img src="./assets/images/productos/producto5.jpg" alt="Foto 5" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="5">
+                <img src="./assets/images/productos/producto6.jpg" alt="Foto 6" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="6">
+                <img src="./assets/images/productos/producto7.jpg" alt="Foto 7" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="7">
+                <img src="./assets/images/productos/producto8.jpg" alt="Foto 8" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="8">
+                <img src="./assets/images/productos/producto9.jpg" alt="Foto 9" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="9">
+                <img src="./assets/images/productos/producto10.jpg" alt="Foto 10" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="10">
+                <img src="./assets/images/productos/producto11.jpg" alt="Foto 11" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+            <div class="col-6 col-md-4 col-xl-3">
+              <button class="thumb-card" type="button" data-bs-toggle="modal" data-bs-target="#galeriaModal"
+                data-index="11">
+                <img src="./assets/images/productos/producto12.jpg" alt="Foto 12" class="thumb-img">
+                <span class="thumb-overlay">
+                  <span class="thumb-chip"><i class="fas fa-search-plus me-2"></i>Ver</span>
+                </span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-perita">
+    <div class="container">
+      <div class="py-3 text-center">
+        © 2026 Bar Perita · Todos los derechos reservados
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL + CAROUSEL para ver imágenes grandes -->
+  <div class="modal fade" id="galeriaModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content galeria-modal">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title galeria-modal-title">Galería</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="modal-body pt-2">
+          <div id="galeriaCarouselModal" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <img src="./assets/images/productos/producto1.jpg" class="d-block w-100 modal-img" alt="Foto 1">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto2.webp" class="d-block w-100 modal-img" alt="Foto 2">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto3.webp" class="d-block w-100 modal-img" alt="Foto 3">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto4.jpg" class="d-block w-100 modal-img" alt="Foto 4">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto5.jpg" class="d-block w-100 modal-img" alt="Foto 5">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto6.jpg" class="d-block w-100 modal-img" alt="Foto 6">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto7.jpg" class="d-block w-100 modal-img" alt="Foto 7">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto8.jpg" class="d-block w-100 modal-img" alt="Foto 8">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto9.jpg" class="d-block w-100 modal-img" alt="Foto 9">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto10.jpg" class="d-block w-100 modal-img" alt="Foto 10">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto11.jpg" class="d-block w-100 modal-img" alt="Foto 11">
+              </div>
+
+              <div class="carousel-item">
+                <img src="./assets/images/productos/producto12.jpg" class="d-block w-100 modal-img" alt="Foto 12">
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#galeriaCarouselModal"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#galeriaCarouselModal"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS: abrir el modal en la slide correcta -->
+  <script>
+    (function () {
+      const thumbs = document.querySelectorAll('.thumb-card');
+      const modalEl = document.getElementById('galeriaModal');
+      const carouselEl = document.getElementById('galeriaCarouselModal');
+
+      if (!modalEl || !carouselEl) return;
+
+      const carousel = new bootstrap.Carousel(carouselEl, { interval: false, ride: false });
+
+      thumbs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const index = parseInt(btn.getAttribute('data-index'), 10) || 0;
+          carousel.to(index);
+        });
+      });
+
+      // Al cerrar, vuelve a la primera para que no se quede “raro”
+      modalEl.addEventListener('hidden.bs.modal', () => carousel.to(0));
+    })();
+  </script>
+
+</body>
+
+</html>
