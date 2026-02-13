@@ -13,12 +13,6 @@ body{
   overflow-x: hidden;
 }
 
-@media (min-width: 992px){
-  body{
-    overflow-y: hidden;
-  }
-}
-
 /* ===== NAVBAR ===== */
 .perita-logo{
   height: 42px;
@@ -74,7 +68,7 @@ body{
 
 /* ===== MAIN ===== */
 .nosotros-main{
-  min-height: calc(100vh - 72px - 52px);
+  flex: 1;
 }
 
 /* ===== Header ===== */
